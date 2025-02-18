@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surat Sakit</title>
+
+    <style>
+        body {
+            background: rgb(0, 0, 0);
+        }
+
+        .kertas_a4 {
+            color: rgb(5, 5, 5);
+            width: 21cm;
+            height: 29.7cm;
+            background: white;
+            padding: 2cm 2cm 2cm 2cm;
+            margin: auto;
+            font-family: "Times New Roman";
+            font-size: 12pt;
+            line-height: 150%;
+        }
+
+        .judul {
+            font-family: "century gothic";
+            font-size: 24pt;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 3cm;
+        }
+
+        .titimangsa {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .kepada_yth {
+            padding-left: 1cm;
+            text-indent: -1cm;
+        }
+
+        .blok_ttd {
+            margin-left: 15cm;
+        }
+
+        .nama_ttd {
+            margin-top: 3cm;
+        }
+
+        .btn-print {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3460db;
+            color: rgb(250, 249, 249);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-print:hover {
+            background-color: #16aec9;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                padding: 0;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+<div class="kertas_a4">
+    <h1 class="judul">SURAT IZIN SAKIT</h1>
+
+    <p class="titimangsa">Yogyakarta, 17 Februari 2025</p>
+
+    <p class="kepada_yth">
+        Kepada Yth. <br />
+        <b>Bapak/Ibu Guru Wali Kelas</b> <br /> [Nama Sekolah] <br />di Tempat
+    </p>
+
+    <p><i>Dengan hormat, </i></p>
+
+    <p>Saya yang bertanda tangan di bawah ini:</p>
+    <ul>
+        <li><b>Nama:</b> [Nama Siswa]</li>
+        <li><b>Kelas:</b> [Kelas]</li>
+        <li><b>NIS:</b> [Nomor Induk Siswa]</li>
+    </ul>
+
+    <p>Dengan ini menginformasikan bahwa anak saya tidak dapat mengikuti kegiatan belajar di sekolah pada hari [tanggal izin] dikarenakan sakit. Oleh karena itu, kami mohon izin kepada Bapak/Ibu Guru agar diberikan keringanan selama masa pemulihan.</p>
+
+    <p>Demikian surat ini kami buat dengan sebenar-benarnya. Atas perhatian dan pengertiannya, kami ucapkan terima kasih.</p>
+
+    <div class="blok_ttd">
+        <p><i>Hormat kami, </i></p>
+
+        <p class="nama_ttd">
+            [Nama Orang Tua/Wali]
+            <br />
+            [Tanda Tangan]
+        </p>
+    </div>
+
+    <button class="btn-print" onclick="printToPDF()">Print to PDF</button>
+</div>
+
+<script>
+    function printToPDF() {
+        console.log('print to PDF function is called');
+        window.print(); // Membuka dialog cetak
+    }
+</script>
+
+</body>
+</html>
